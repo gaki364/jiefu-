@@ -1,0 +1,9 @@
+unpackage
+
+build/build_apk/*.apk
+build/*.apk
+buildIOS/HBuilder/HBuilder-Hello/Pandora/
+.DS_Store
+
+UserInterfaceState.xcuserstate
+xcuserdata

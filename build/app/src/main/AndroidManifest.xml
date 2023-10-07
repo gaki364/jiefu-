@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.myapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+<!--    这些权限UNIAPP会使用 无法删除,删除后无法正常运行APP-->
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" tools:node="remove"/>
+<!--    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" tools:node="remove"/>-->
+
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+	
+    <!-- 读取联系人权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+		android:requestLegacyExternalStorage="true"
+        tools:node="merge"
+        tools:replace="android:allowBackup,android:usesCleartextTraffic">
+
+        <!-- 多渠道包配置 -->
+        <meta-data android:value="${CHANNEL_VALUE}" android:name="CHANNEL"/>
+        <meta-data android:value="${APPID}" android:name="APPID"/>
+        <meta-data android:value="${SERVERID}" android:name="SERVERID"/>
+
+        <!--需要的刘海屏适配 -->
+        <!--google刘海适配-->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" />
+        <!--小米手机开启刘海适配-->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
+        <!--华为手机开启刘海适配-->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" />
+
+        <activity
+            android:name="org.app.active.MyPandoraEntry"
+            android:configChanges="orientation|keyboardHidden|keyboard|navigation"
+            android:hardwareAccelerated="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="user"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="org.app.active.MyPandoraEntryActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|mcc|mnc|fontScale|keyboard"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTask"
+            android:permission="com.miui.securitycenter.permission.AppPermissionsEditor"
+            android:screenOrientation="portrait"
+            android:theme="@style/DCloudTheme"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <action android:name="android.intent.action.VIEW" />
+                <data android:scheme="h56131bcf" />
+            </intent-filter>
+        </activity>
+
+        <!-- 应用内部协议打开 -->
+        <!-- 浏览器代码: <a href="ltmobi://SDSDApp:8888/ltmain">打开源生应用指定的页面1</a> -->
+        <activity android:name="org.app.active.SecondActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="vb"
+                    android:path="/tsdfg"
+                    android:port="8888"
+                    android:scheme="jfgj" />
+            </intent-filter>
+        </activity>
+
+        <!-- facebook -->
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+		<meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
+		<activity android:name="com.facebook.FacebookActivity"
+			android:configChanges=
+					"keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+			android:label="@string/app_name" />
+		<activity
+			android:name="com.facebook.CustomTabActivity"
+			android:exported="true">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="@string/fb_login_protocol_scheme" />
+			</intent-filter>
+		</activity>
+		<!-- facebook -->
+		
+    </application>
+
+</manifest>

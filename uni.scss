@@ -1,0 +1,396 @@
+/* Color variable */
+
+/* Behavior related colors */
+$uni-color-primary: #007aff;
+$uni-color-success: #4cd964;
+$uni-color-warning: #f0ad4e;
+$uni-color-error: #dd524d;
+
+/* Basic color of text */
+$uni-text-color:#333;//
+$uni-text-color-inverse:#fff;//
+$uni-text-color-grey:#999;//
+$uni-text-color-placeholder: #808080;
+$uni-text-color-disable:#c0c0c0;
+
+/* background color */
+$uni-bg-color:#ffffff;
+$uni-bg-color-grey:#f8f8f8;
+$uni-bg-color-hover:#f1f1f1;//
+$uni-bg-color-mask:rgba(0, 0, 0, 0.4);//
+
+/* Border color */
+$uni-border-color:#c8c7cc;
+
+/* Dimensional variables */
+
+/* Text size */
+$uni-font-size-sm:24rpx;
+$uni-font-size-base:28rpx;
+$uni-font-size-lg:32rpx;
+
+/* Picture size */
+$uni-img-size-sm:40rpx;
+$uni-img-size-base:52rpx;
+$uni-img-size-lg:80rpx;
+
+/* Border Radius */
+$uni-border-radius-sm: 4rpx;
+$uni-border-radius-base: 6rpx;
+$uni-border-radius-lg: 12rpx;
+$uni-border-radius-circle: 50%;
+
+/* Horizontal spacing */
+$uni-spacing-row-sm: 10px;
+$uni-spacing-row-base: 20rpx;
+$uni-spacing-row-lg: 30rpx;
+
+/* Vertical spacing */
+$uni-spacing-col-sm: 8rpx;
+$uni-spacing-col-base: 16rpx;
+$uni-spacing-col-lg: 24rpx;
+
+/* transparency */
+$uni-opacity-disabled: 0.3; // Transparency of component disabled state
+
+/* Article scene related */
+$uni-color-title: #2C405A; // Article title color
+$uni-font-size-title:40rpx;
+$uni-color-subtitle: #555555; // Secondary Title Color
+$uni-font-size-subtitle:36rpx;
+$uni-color-paragraph: #3F536E; // Paragraph color
+$uni-font-size-paragraph:30rpx;
+
+/* Custom color */
+$color-white: #fff;
+
+/* Text size */
+$font-sm: 20rpx;
+$font-base: 30rpx;
+$font-lg: 40rpx;
+$font-lg2: 50rpx;
+
+/* background color */
+$ComBg-color1: #EBEBEB; // Main background color
+$ComBg-color2: #EBEBEB; // Some control pop-up background color
+$ComBg-color3: #14181B; 
+$ComBg-color-title: #3581FF; // Title background color
+
+/* Border color */
+$ComBorder-color1:#050505;	// Border color
+
+/* Font color */
+$ComText-color-title: #FFFFFF;	// Title Color
+$ComText-color-back: #FFFFFF; 	// Return button color
+$ComText-color-orange: #FB6400;	//
+$ComText-color-green: #2DE75D;	//
+$ComText-color-blue: #3581FF;	//
+$ComText-color-lightBlue: #8BBFFF;	//
+$ComText-color-red: #FF2525;	//
+$ComText-color-lightRed: #FF4343;	//
+$ComText-color-black: #252525;	//
+$ComText-color-grey: #818181;	//
+
+/* Common button colors */
+$ComBtn-color-orange: #F88C33; //
+$ComBtn-color-blue: #4765FD; //
+$ComBtn-color-lightBlue: #4C7FFF; //
+$ComBtn-color-red: #F84040; //
+$ComBtn-color-green: #2DE75D; //
+$ComBtn-color-linear: linear-gradient(to right, #FD9102, #DE3500);
+
+@import "uview-ui/theme.scss";
+
+.rtlStyle{
+	direction: rtl;
+}
+
+.MaskWindow {
+	background: rgba(0, 0, 0, 0.0);
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 110;
+	width: 100%;
+	height: 100%;
+
+	.out {
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.4);
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		.window {
+			// background: linear-gradient(#1D214F, #1D214F);
+			background:#d93195 ;
+			background-size: 100% 100%;
+			// border: 2rpx solid #1D5467;
+			// border-radius: 18rpx;
+
+			width: 80%;
+			position: relative;
+			margin: auto;
+			border-radius: 16rpx;
+			padding-bottom: 30rpx;
+			border: 8rpx solid rgba($color: #ffb000, $alpha: 0.7);
+			
+			.titleTest {
+				color: #FFFFFF;
+				text-align: center;
+				font-size: 34rpx;
+				font-weight: 600;
+			}
+			
+			.centerBg {
+				width: 92%;
+				background: rgba($color: #7C0A1D, $alpha: 1);
+				margin: auto;
+				border-radius: 12rpx;
+			}
+		}
+	}
+}
+
+
+.hengzhe {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.hengzhe_left {
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+}
+
+// 绿色按钮
+.btnLvSe {
+	width: 40%;
+	height: 68rpx;
+	
+	font-size: 30rpx;
+	text-align: center;
+	background-size: 100% 100%;
+	border-radius: 18rpx;
+	line-height: 68rpx;
+	text-align: center;
+	margin: auto;
+	
+	color: #FFFFFF;
+	// border: 4rpx solid #D11411;
+	background: url('@/static/new/enter-2.png') no-repeat;
+	background-size: 100% 100%;
+	
+}
+
+// 黄色按钮
+.btnHuangSe {
+	width: 40%;
+	height: 68rpx;
+
+	font-size: 30rpx;
+	background-size: 100% 100%;
+	border-radius: 18rpx;
+	line-height: 68rpx;
+	text-align: center;
+	margin: auto;
+	
+	color: #FFFFFF;
+	// border: 4rpx solid #D11411;
+	background: url('@/static/new/enter-2.png') no-repeat;
+	background-size: 100% 100%;
+}
+
+.commonBtnBg {
+	width: 595rpx;
+	height: 66rpx;
+	font-size: 30rpx;
+	text-align: center;
+	// background: linear-gradient(to right, #ED3666, #ED3666, #ED3666);
+	background-size: 100% 100%;
+	color: #ffffff;
+	text-align: center;
+	// background: url('@/static/btn961.png') no-repeat;
+	// background-size: 100% 100%;
+    background: #d93195;
+
+	line-height: 66rpx;
+	border-radius: 120rpx;
+	margin: auto;
+	position: relative;
+}
+.gap{
+	height: 20rpx
+}
+
+.commonJbBg {
+	width: 234rpx;
+	height: 54rpx;
+	font-size: 30rpx;
+	text-align: center;
+	background: #453274;
+	background-size: 100% 100%;
+	position: relative;
+	border-radius: 12rpx;
+	
+	border: 4rpx solid #65e8ef;
+
+	line-height: 71rpx;
+	color: #FFFFFF;
+}
+
+.strip {
+	width: 537rpx;
+	height: 28rpx;
+	// color: rgba(80, 80, 80, 1);
+	background: #FFFFFF;
+	background-size: 100% 100%;
+	border-radius: 360rpx;
+	margin: auto;
+	margin-top: 20rpx;
+	
+	position: relative;
+
+	.blue {
+		height: 30rpx;
+		// color: rgba(80, 80, 80, 1);
+		
+		background: #009ffa;
+		// margin-top: 4rpx;
+		border-radius: 360rpx;
+	}
+}
+
+.modifyBtn {
+	width: 30%;
+	height: 52rpx;
+	font-size: 20rpx;
+	color: #FFFFFF;
+	text-align: center;
+	background: url('@/static/new/btn0011.png') no-repeat;
+	background-size: 100% 100%;
+
+	line-height: 52rpx;
+	margin: auto;
+	position: relative;
+	border-radius: 12rpx;
+	
+}
+
+.touBg {
+	background: rgba($color: #000000, $alpha: 0.5);
+}
+
+
+.gameNew {
+	background: url('@/static/new/icon0019.png') no-repeat;
+
+	background-size: 100% 100%;
+	width: 67rpx;
+	height: 36rpx;
+	position: absolute;
+	top: 20rpx;
+}
+
+.gameHot {
+	background: url('@/static/new/icon0020.png') no-repeat;
+
+	background-size: 100% 100%;
+	width: 67rpx;
+	height: 36rpx;
+	position: absolute;
+	top: 20rpx;
+}
+
+.nickNameMdBg {
+	background: url('@/static/icon28.png') no-repeat;
+	background-size: 100% 100%;
+	
+	width: 35rpx;
+	height: 35rpx;
+	margin: auto;
+	margin-right: 10rpx;
+	margin-left: auto;
+}
+
+.dlBg {
+	background: url('@/static/jiefu16/agentBg.png') no-repeat;
+	background-size: 100% 100%;
+	width: 697rpx;
+	height: 292rpx;
+	margin: auto;
+	margin-top: 20rpx;
+	
+	.box {
+		background-color: #118A23;
+		width: 80%;
+		border-radius: 18rpx;
+	}
+	
+	.dlImg {
+		background: url('@/static/new/iconstart-2.png') no-repeat;
+		background-size: 100% 100%;
+		
+		margin: auto;
+		width: 64rpx;
+		height: 62rpx;
+		margin-right: 10rpx;
+		
+	}
+}
+
+.inputType {
+	// background: url('@/static/enter07.png') no-repeat;
+	// background-size: 100% 100%;
+	background: #5c356a;
+	margin: auto;
+	height: 64rpx;
+	font-size: 20rpx;
+	border:2rpx solid #69f4f6;
+	
+}
+.loginInput{
+	background: url('@/static/enter07.png') no-repeat;
+	background-size: 100% 100%;
+	padding-left: 10rpx;
+	margin: auto;
+	height: 64rpx;
+	font-size: 20rpx;
+}
+.overLine{
+	text-overflow: ellipsis;
+      overflow: hidden;
+      text-wrap: nowrap;
+}
+.cardBg{
+	background: rgba(217, 49, 149, 0.2);
+}
+.drawBg{
+	background-color: #d93195 !important;
+}
+.boxShadow{
+	box-shadow: 0px 0px 5px 1px #fff;
+	border-radius: 10rpx;
+}
+.btnBg{
+	background: #ffcc19;
+}
+.longBtn{
+	background: #ffcc19;
+}
+.page{
+	background: url("@/static/jiefu16/idx2_bg.png") no-repeat;
+		background-size: 100% 100%;
+}
+
+.enviarBtn{
+	background: url("@/static/jiefu17/sa_btn.png") no-repeat ;
+	background-size: 100% 100%;
+	font-size: 26rpx; 
+	font-weight: 600; 
+	width: 40%;
+}

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">all win</string>
+    <string name="dcloud_choose_an_action">Select operation</string>
+    <string name="dcloud_permission_read_phone_state_message">In order to ensure your normal and safe use, you need to obtain the device identification code (some mobile phones prompt to obtain the mobile phone number), please allow.</string>
+    <string name="dcloud_permission_write_external_storage_message">The application saves running status and other information. It needs to obtain the permission to read and write mobile phone storage (the system prompts to access photos, media content and files on the device). Please allow.</string>
+    <string name="dcloud_privacy_prompt_accept_button_text">I know</string>
+    <string name="dcloud_privacy_prompt_message"><Data>"Please read carefully and fully understand the terms of the "Service Agreement" and "Privacy Policy", including but not limited to: In order to provide you with better services, we need to collect your device identification, operation log and other information for analysis, Optimize application performance&lt;br />  You can read&lt;a href=\"\">"Service Agreement"&lt;/a>and&lt;a href=\"\">"Privacy Policy"&lt;/a>Learn more. If you agree, please click the button below to start accepting our service."</Data></string>
+    <string name="dcloud_privacy_prompt_title">Service Agreement and Privacy Policy</string>
+    <string name="dcloud_sync_debug_message">The current application is running in a custom debugging base. When releasing the official version, please do not check the custom debugging base when packaging.</string>
+    <string name="stream_my">Recent streaming apps</string>
+
+    <!-- 获取联系人权限提示 -->
+    <string name="contacts_title">prompt</string>
+    <string name="contacts_message">Note: The necessary permissions are currently missing</string>
+    <string name="contacts_NegativeButton">cancel</string>
+    <string name="contacts_PositiveButton">to authorize</string>
+
+    <string name="facebook_app_id">448624174134306</string>
+	<string name="fb_login_protocol_scheme">fb448624174134306</string>
+	<string name="facebook_client_token">3f645534e8431f072a37258a687b695a</string>
+</resources>

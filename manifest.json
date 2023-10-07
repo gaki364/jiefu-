@@ -1,0 +1,113 @@
+{
+    "name" : "Game",
+    "appid" : "__UNI__8CAD538",
+    "description" : "",
+    "versionName" : "3.0.1",
+    "versionCode" : 30000,
+    "transformPx" : false,
+    /* 5+App特有相关 */
+    "app-plus" : {
+        "usingComponents" : true,
+        "nvueCompiler" : "uni-app",
+        "compilerVersion" : 3,
+        "splashscreen" : {
+            "alwaysShowBeforeRender" : false,
+            "waiting" : false,
+            "autoclose" : false,
+            "delay" : 0
+        },
+        "safearea" : {
+            "background" : "#CCCCCC",
+            "bottom" : {
+                "offset" : "auto"
+            }
+        },
+        /* 模块配置 */
+        "modules" : {},
+        /* 应用发布信息 */
+        "distribute" : {
+            /* android打包配置 */
+            "android" : {
+                "permissions" : [
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>"
+                ],
+                "abiFilters" : [ "armeabi-v7a", "arm64-v8a" ],
+                "minSdkVersion" : 19,
+                "targetSdkVersion" : 24,
+                "autoSdkPermissions" : false
+            },
+            /* ios打包配置 */
+            "ios" : {
+                "idfa" : false
+            },
+            /* SDK配置 */
+            "sdkConfigs" : {
+                "ad" : {}
+            },
+            "splashscreen" : {
+                "androidStyle" : "common",
+                "android" : {
+                    "hdpi" : "C:/Users/XX/Desktop/1.png",
+                    "xhdpi" : "C:/Users/XX/Desktop/2.png",
+                    "xxhdpi" : "C:/Users/XX/Desktop/3.png"
+                }
+            }
+        },
+        "compatible" : {
+            "ignoreVersion" : true
+        }
+    },
+    /* 快应用特有相关 */
+    "quickapp" : {},
+    /* 小程序特有相关 */
+    "mp-weixin" : {
+        "appid" : "",
+        "setting" : {
+            "urlCheck" : false
+        },
+        "usingComponents" : true
+    },
+    "mp-alipay" : {
+        "usingComponents" : true
+    },
+    "mp-baidu" : {
+        "usingComponents" : true
+    },
+    "mp-toutiao" : {
+        "usingComponents" : true
+    },
+    "uniStatistics" : {
+        "enable" : false
+    },
+    "h5" : {
+        "devServer" : {
+            "port" : 8001,
+            "disableHostCheck" : true,
+            "proxy" : {
+                "/v1" : {
+                    "target" : "https://www.brrealbet777.com/",
+                    "changeOrigin" : true,
+                    "secure" : false
+                }
+            },
+            "https" : false
+        },
+        "title" : "brrealbet777.com",
+        "optimization" : {
+            "treeShaking" : {
+                "enable" : true
+            }
+        },
+        "router" : {
+            "base" : "",
+            "mode" : "history"
+        },
+        // "mode" : "history"
+        "template" : "index.html",
+        "domain" : "https://www.brrealbet777.com"
+    }
+}
+/* 模块配置 *//* 应用发布信息 *//* android打包配置 */
+
