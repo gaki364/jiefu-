@@ -3,7 +3,6 @@
 		<!-- 玩家信息 -->
 		<uniplayertitle ref="uniplayertitle" mode="1" :swiperlist="swiperlist" :isShowVip="true" @flushTarbar="flushTarbar"
 		 @showDlPop="onEvent_showDlPop"></uniplayertitle>
-
 		<!-- 广告 -->
 		<view style="height: 10rpx;"></view>
 
@@ -92,8 +91,8 @@
 	import uniplayertitle from '@/components/game/uni-playertitle.vue';
 	import notice2 from "@/components/notice/notice2.vue";
 	import gameRank from "@/components/game/uni-rank.vue";
-	import dlPop from "@/components/kefuPop/dlPop.vue"
-
+	import dlPop from "@/components/kefuPop/dlPop.vue";
+    import topLink from "@/components/game/uni-topLink.vue";
 	export default {
 		components: {
 			uniplayertitle,
@@ -101,6 +100,7 @@
 			notice2,
 			gameRank,
 			dlPop,
+			topLink
 		},
 
 		data() {

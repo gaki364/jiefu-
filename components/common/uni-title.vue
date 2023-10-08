@@ -7,7 +7,11 @@
 			<view style="height: 20rpx;"></view>
 			<uniStatusBar v-if="statusBar" />
 
-			<text v-if="flag" class="titleReturn" @click="onClickButton_Back">{{titleReturn}}</text>
+			<text v-if="flag" class="titleReturn" @click="onClickButton_Back">{{titleReturn}}
+
+				<u-icon name="arrow-left" color="#fcd62b" size="56"></u-icon>
+			</text>
+			
 			<view class="titleText">{{titleText}}</view>
 		</view>
 
@@ -118,7 +122,7 @@
 			// height: 100upx;
 			width: 100%;
 			line-height: 80upx;
-			color: #D1A95C;
+			color: #fcd62b;
 
 			.titleReturn {
 				// float: left;
@@ -129,8 +133,8 @@
 				width: 31rpx;
 				height: 53rpx;
 				// color: rgba(80, 80, 80, 1);
-				background: url('@/static/new/btn0012.png') no-repeat;
-				background-size: 100% 100%;
+				// background: url('@/static/jiefu17/btn0012.png') no-repeat;
+				// background-size: 100% 100%;
 				// border-radius: 30rpx;
 				left: 6%;
 				top: 34%;

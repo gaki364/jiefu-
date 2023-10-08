@@ -3,7 +3,7 @@
 -->
 <template>
 	<view>
-		<image :src="gAssets.common_flush" @click="onButtonClick_flush()" style="width: 56rpx; height: 44rpx;"></image>
+		<image :src="gAssets.common_flush" @click="onButtonClick_flush()" class="btn"></image>
 	</view>
 </template>
 
@@ -40,6 +40,9 @@
 	}
 </script>
 
-<style lang="scss">
-
+<style lang="scss" scoped>
+.btn{
+	width: 72rpx;
+	height: 53rpx;
+}
 </style>

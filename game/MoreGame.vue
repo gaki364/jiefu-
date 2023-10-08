@@ -381,8 +381,7 @@ page {
 .titleBg {
   padding-top: env(safe-area-inset-top);
   padding-top: var(--status-bar-height);
-
-  background-color: #313783;
+  background:$topBg;
   width: 100%;
   position: fixed;
   z-index: 20;

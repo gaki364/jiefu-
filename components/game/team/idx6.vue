@@ -9,21 +9,20 @@
 			</view>
 			
 			<view class="commonBtnBg3" >
-				<view style="height: 20rpx;"></view>
-				<view style="display: flex; width: 96%; margin: auto;">
-					<view style="font-size: 20rpx; color: #FFFFFF; text-align: center; margin: auto 0rpx auto 20rpx;">Receita total deste mês</view>
-					<view style="font-size: 20rpx; color: #FFFFFF; text-align: center; margin: auto 6rpx auto auto;">{{gHelper.formatMoney(serverData.ThisMonthIncome) + "R$"}}</view>
-					<view @click="onButtonClick_DadosO(0)"  class="commonBtnBg" style="width: 20%; height: 40rpx; line-height: 40rpx; font-size: 20rpx; border-radius: 10rpx; margin-right: 20rpx; margin-left: 0rpx;">{{"Dados"}}</view>
+				
+				<view style="display: flex; width: 96%; margin: auto;" class="commonLine">
+					<view class="text1">Receita total deste mês</view>
+					<view class="text2">{{gHelper.formatMoney(serverData.ThisMonthIncome) + "R$"}}</view>
+					<view @click="onButtonClick_DadosO(0)"  class="commonBtnBg">{{"Dados"}}</view>
 				</view>
-				<view style="height: 20rpx;"></view>
 			</view>
 			
 			
 			<view class="commonBtnBg3">
 				<view style="height: 20rpx;"></view>
-				<view style="display: flex; width: 96%; margin: auto;">
-					<view style="font-size: 20rpx; color: #FFFFFF; text-align: center; margin: auto 0rpx auto 20rpx;">Número de membros este mês</view>
-					<view style="font-size: 20rpx; color: #FFFFFF; text-align: center; margin: auto 16rpx auto auto;">{{serverData.ThisMonthMember}}</view>
+				<view style="display: flex; width: 96%; margin: auto;" >
+					<view class="text1">Número de membros este mês</view>
+					<view class="text2">{{serverData.ThisMonthMember}}</view>
 				</view>
 				<view style="height: 20rpx;"></view>
 			</view>
@@ -32,8 +31,8 @@
 			<view class="commonBtnBg3" >
 				<view style="height: 20rpx;"></view>
 				<view style="display: flex; width: 96%; margin: auto;">
-					<view style="font-size: 20rpx; color: #FFFFFF; text-align: center; margin: auto 0rpx auto 20rpx;">Recarga</view>
-					<view style="font-size: 20rpx; color: #FFFFFF; text-align: center; margin: auto 16rpx auto auto;">{{gHelper.formatMoney(serverData.ThisMonthDeposit) + "R$"}}</view>
+					<view class="text1">Recarga</view>
+					<view class="text2">{{gHelper.formatMoney(serverData.ThisMonthDeposit) + "R$"}}</view>
 		
 				</view>
 				<view style="height: 20rpx;"></view>
@@ -42,8 +41,8 @@
 			<view class="commonBtnBg3" >
 				<view style="height: 20rpx;"></view>
 				<view style="display: flex; width: 96%; margin: auto;">
-					<view style="font-size: 20rpx; color: #FFFFFF; text-align: center; margin: auto 0rpx auto 20rpx;">Retirada</view>
-					<view style="font-size: 20rpx; color: #FFFFFF; text-align: center; margin: auto 16rpx auto auto;">{{gHelper.formatMoney(serverData.ThisMonthWithdraw) + "R$"}}</view>
+					<view class="text1">Retirada</view>
+					<view class="text2">{{gHelper.formatMoney(serverData.ThisMonthWithdraw) + "R$"}}</view>
 				</view>
 				<view style="height: 20rpx;"></view>
 			</view>
@@ -56,44 +55,43 @@
 				
 				<view style="font-size: 30rpx; margin: auto;">{{'Dados do último mês'}}</view>
 			</view>
-			<view style="height: 10rpx;"></view>
-			<view class="commonBtnBg3" style="margin: auto;">
-				<view style="height: 20rpx;"></view>
-				<view style="display: flex; width: 96%; margin: auto;">
-					<view style="font-size: 20rpx; color: #FFFFFF; text-align: center; margin: auto 0rpx auto 20rpx;">Receita total deste mês</view>
-					<view style="font-size: 20rpx; color: #FFFFFF; text-align: center; margin: auto 6rpx auto auto;">{{gHelper.formatMoney(serverData.LastMonthIncome) + "R$"}}</view>
-					<view @click="onButtonClick_DadosO(-1)"  class="commonBtnBg" style="width: 20%; height: 40rpx; line-height: 40rpx; font-size: 20rpx; border-radius: 10rpx; margin-right: 20rpx; margin-left: 0rpx;">{{"Dados"}}</view>
+			
+			<view class="commonBtnBg3" >
+				<view style="display: flex; width: 96%; margin: auto;" class="commonLine">
+					<view class="text1">Receita total deste mês</view>
+					<view class="text2">{{gHelper.formatMoney(serverData.LastMonthIncome) + "R$"}}</view>
+					<view @click="onButtonClick_DadosO(-1)"  class="commonBtnBg">{{"Dados"}}</view>
 				</view>
 				<view style="height: 20rpx;"></view>
 			</view>
 			
-			<view style="height: 10rpx;"></view>
-			<view class="commonBtnBg3" style="margin: auto;">
+			
+			<view class="commonBtnBg3" >
 				<view style="height: 20rpx;"></view>
 				<view style="display: flex; width: 96%; margin: auto;">
-					<view style="font-size: 20rpx; color: #FFFFFF; text-align: center; margin: auto 0rpx auto 20rpx;">Número de membros este mês</view>
-					<view style="font-size: 20rpx; color: #FFFFFF; text-align: center; margin: auto 16rpx auto auto;">{{serverData.LastMonthMember}}</view>
+					<view class="text1">Número de membros este mês</view>
+					<view class="text2">{{serverData.LastMonthMember}}</view>
 				</view>
 				<view style="height: 20rpx;"></view>
 			</view>
 			
-			<view style="height: 10rpx;"></view>
-			<view class="commonBtnBg3" style="margin: auto;">
+			
+			<view class="commonBtnBg3" >
 				<view style="height: 20rpx;"></view>
 				<view style="display: flex; width: 96%; margin: auto;">
-					<view style="font-size: 20rpx; color: #FFFFFF; text-align: center; margin: auto 0rpx auto 20rpx;">Recarga</view>
-					<view style="font-size: 20rpx; color: #FFFFFF; text-align: center; margin: auto 16rpx auto auto;">{{gHelper.formatMoney(serverData.LastMonthDeposit) + "R$"}}</view>
+					<view class="text1">Recarga</view>
+					<view class="text2">{{gHelper.formatMoney(serverData.LastMonthDeposit) + "R$"}}</view>
 		
 				</view>
 				<view style="height: 20rpx;"></view>
 			</view>
 			
-			<view style="height: 10rpx;"></view>
-			<view class="commonBtnBg3" style="margin: auto;">
+			
+			<view class="commonBtnBg3" >
 				<view style="height: 20rpx;"></view>
 				<view style="display: flex; width: 96%; margin: auto;">
-					<view style="font-size: 20rpx; color: #FFFFFF; text-align: center; margin: auto 0rpx auto 20rpx;">Retirada</view>
-					<view style="font-size: 20rpx; color: #FFFFFF; text-align: center; margin: auto 16rpx auto auto;">{{gHelper.formatMoney(serverData.LastMonthWithdraw) + "R$"}}</view>
+					<view class="text1">Retirada</view>
+					<view class="text2">{{gHelper.formatMoney(serverData.LastMonthWithdraw) + "R$"}}</view>
 				</view>
 				<view style="height: 20rpx;"></view>
 			</view>
@@ -235,7 +233,7 @@
 	}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 	page {
 		background: #0B0C10;
 		color: #FFFFFF;
@@ -253,7 +251,7 @@
 	}
 	
 	.commonBtnBg2 {
-		background: #ffb000;
+		background:#01913a;
 		width: 670rpx;
 		height: 68rpx;
 		color: #FFFFFF;
@@ -262,13 +260,43 @@
 	}
 	
 	.commonBtnBg3 {
-		background:rgba(98, 32, 157, 0.6);
+		background:#ffd82b;
 		width: 98%;
 		height: 71rpx;
 		color: #FFFFFF;
-		margin: 20rpx auto;
-		border: 2rpx solid #db921a;
+		margin: 30rpx auto;
 		border-radius: 6rpx;
+       
+        .commonLine{
+			display: flex;
+			width: 96%;
+			margin: auto;
+			height: 100%;
+			align-items: center;
+
+			.commonBtnBg{
+			width: 161rpx;
+			height: 55rpx;
+			background: url("@/static/jiefu17/tagBg.png") no-repeat;
+			background-size: 100% 100%;
+			border-radius: 0px;
+			line-height: 55rpx;
+		}
+
+		
+
+		}
+		.text1{
+			margin: auto 0rpx auto 20rpx;
+			font-size: 26rpx;
+			font-weight: bold ;
+		}
+		.text2{
+			font-size: 32rpx;
+			margin: auto 16rpx auto auto;
+
+		}
+		
 	}
 	
 </style>

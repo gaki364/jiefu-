@@ -23,15 +23,10 @@
           >
         </view>
         <!-- <view style="width: 2rpx; height: 78rpx; margin: auto; background-color: #A3A3A3;" v-if="IsAgent==1 || gRequest.userManager.isBz"></view> -->
-        <view
-          class="Dados_box"
-          v-if="IsAgent==1 || gRequest.userManager.isBz"
-          @click="onButtonClick_chosePage(2)"
-        >
+        <view class="Dados_box" @click="onButtonClick_chosePage(2)">
           <view :class="pageTpye == 2 ? 'page3Img' : 'page3Img2'"></view>
           <view
             :class="pageTpye == 2 ? 'choseColor text' : 'NoChoseColor text'"
-           
             >{{ BtnText }}</view
           >
         </view>
@@ -43,76 +38,45 @@
       <view class="gap"></view>
 
       <view v-if="pageTpye == 0">
-        <view
-          style="
-            border-radius: 12rpx;
-            width: 100%;
-            margin: auto;
-          "
-          class="cardBg card_item"
-        >
-          <view
-            class="commonBtnBg2"
-            style="width: 96%; display: flex"
-          >
-            <view
-              class="saqueImg"
-              style="margin-left: auto; margin-right: 10rpx"
-            ></view>
-            <view
-              style="
-                font-size: 30rpx;
-                margin: auto;
-                margin-left: 10rpx;
-              "
-              >{{ $t("KEY_INDEX2_TI1") }}</view
-            >
+        <view class="cardBg card_item">
+          <view class="total_line">
+            <view class="commonBtnBg2">
+              <view class="saqueImg"></view>
+              <view style="font-size: 30rpx; margin-left: 10rpx">{{
+                $t("KEY_INDEX2_TI1")
+              }}</view>
+            </view>
+
+            <view class="transNum">{{
+              gHelper.formatMoney(serverData.TotalRevenue)
+            }}</view>
           </view>
+
           <view style="height: 10rpx"></view>
-          <view style="text-align: center; font-size: 24rpx; color: #56a6bd">{{
+          <!-- <view style="text-align: center; font-size: 24rpx; color: #56a6bd">{{
             gHelper.formatMoney(serverData.TotalRevenue)
-          }}</view>
+          }}</view> -->
           <view style="height: 10rpx"></view>
-          <view style="display: flex">
-            <view style="display: flex; width: 50%; margin: auto">
+          <view class="renda">
+            <view class="renda_item">
               <view
                 style="
                   color: #ffffff;
                   font-size: 28rpx;
-                  margin: auto;
+
                   margin-left: 20rpx;
                 "
                 >{{ $t("KEY_INDEX2_TI") }}</view
               >
-              <view
-                style="
-                  color: #56a6bd;
-                  font-size: 28rpx;
-                  margin: auto;
-                  margin-left: 10rpx;
-                "
-                >{{ gHelper.formatMoney(serverData.TodayEarnings) }}</view
-              >
+              <view class="money">{{
+                gHelper.formatMoney(serverData.TodayEarnings)
+              }}</view>
             </view>
-            <view style="display: flex; width: 50%; margin: auto">
-              <view
-                style="
-                  color: #ffffff;
-                  font-size: 28rpx;
-                  margin: auto;
-                  margin-left: 20rpx;
-                "
-                >{{ $t("KEY_INDEX2_YI") }}</view
-              >
-              <view
-                style="
-                  color: #56a6bd;
-                  font-size: 28rpx;
-                  margin: auto;
-                  margin-left: 10rpx;
-                "
-                >{{ gHelper.formatMoney(serverData.YesterdayEarnings) }}</view
-              >
+            <view class="renda_item">
+              <view class="name">{{ $t("KEY_INDEX2_YI") }}</view>
+              <view class="money">{{
+                gHelper.formatMoney(serverData.YesterdayEarnings)
+              }}</view>
             </view>
           </view>
           <view style="height: 20rpx"></view>
@@ -120,190 +84,129 @@
         <view style="height: 20rpx"></view>
 
         <view
-          style="
-            border-radius: 12rpx;
-            width: 100%;
-            margin: auto;
-          "
+          style="border-radius: 12rpx; width: 100%; margin: auto"
           class="cardBg card_item"
         >
-          <view style="height: 6rpx"></view>
-          <view class="commonBtnBg2" style="width: 98%; margin: auto">
-            <view
-              style="
-                font-size: 30rpx;
-                text-align: center;
-                line-height: 68rpx;
-                text-align:center;
-              "
-              >{{ $t("KEY_NEW_IDX2_VDA") }}</view
-            >
+          <view class="total_line">
+            <view class="commonBtnBg2">
+              <view
+                style="
+                  font-size: 30rpx;
+                  text-align: center;
+                  line-height: 68rpx;
+                  text-align: center;
+                "
+                >{{ $t("KEY_NEW_IDX2_VDA") }}</view
+              >
+            </view>
+
+            <view class="transNum">
+              <view class="LvImg"></view>
+              <text>
+                {{ "R$ " + gHelper.formatMoney(serverData2.TurnoverTeam) }}
+              </text>
+            </view>
           </view>
+          <view style="height: 6rpx"></view>
+
           <view style="height: 10rpx"></view>
-          <view style="text-align: center; font-size: 24rpx; color: #56a6bd">{{
+          <!-- <view style="text-align: center; font-size: 24rpx; color: #56a6bd">{{
             "R$ " + gHelper.formatMoney(serverData2.TurnoverTeam)
-          }}</view>
-          <view style="position: relative">
-            <view
-              style="
-                color: #56a6bd;
-                position: absolute;
-                width: 30%;
-                text-align: center;
-                left: 18%;
-                font-size: 28rpx;
-                top: 46%;
-              "
-            >
+          }}</view> -->
+          <view style="position: relative" class="renda">
+            <view class="renda_item">
               <view>{{ "Nível 1" }}</view>
-              <view style="height: 20rpx"></view>
-              <view style="color: #ffffff">{{
+              <view class="money">{{
                 "R$ " + gHelper.formatMoney(serverData2.TurnoverSub)
               }}</view>
             </view>
-            <view
-              style="
-                color: #56a6bd;
-                position: absolute;
-                width: 30%;
-                text-align: center;
-                right: 18%;
-                font-size: 28rpx;
-                top: 46%;
-              "
-            >
+            <view class="renda_item">
               <view>{{ "Nível 2" }}</view>
-              <view style="height: 20rpx"></view>
-              <view style="color: #ffffff">{{
+              <view class="money">{{
                 "R$ " + gHelper.formatMoney(serverData2.TurnoverSon)
               }}</view>
             </view>
-            <view class="LvImg"></view>
-            <view style="height: 60rpx"></view>
+            <!-- <view class="LvImg"></view> -->
           </view>
           <view style="height: 20rpx"></view>
         </view>
         <view style="height: 20rpx"></view>
         <view
-          style="
-            border-radius: 12rpx;
-            width: 100%;
-            margin: auto;
-          "
+          style="border-radius: 12rpx; width: 100%; margin: auto"
           class="cardBg card_item"
         >
-          <view style="height: 6rpx"></view>
-          <view class="commonBtnBg2" style="width: 98%; margin: auto;text-align:center;">
-            <view
-            
-              >{{ $t("KEY_NEW_IDX2_NDD") }}</view
-            >
+          <view class="total_line">
+            <view class="commonBtnBg2">
+              <view>{{ $t("KEY_NEW_IDX2_NDD") }}</view>
+            </view>
+
+            <view class="transNum">
+              <view class="LvImg"></view>
+              <text>
+                {{ serverData2.RechargePlayerTeam }}
+              </text>
+            </view>
           </view>
           <view style="height: 10rpx"></view>
-          <view style="text-align: center; font-size: 24rpx; color: #56a6bd">{{
+          <!-- <view style="text-align: center; font-size: 24rpx; color: #56a6bd">{{
             serverData2.RechargePlayerTeam
-          }}</view>
-          <view style="position: relative">
-            <view
-              style="
-                color: #56a6bd;
-                position: absolute;
-                width: 30%;
-                text-align: center;
-                left: 18%;
-                font-size: 28rpx;
-                top: 46%;
-              "
-            >
+          }}</view> -->
+          <view style="position: relative" class="renda">
+            <view class="renda_item">
               <view>{{ "Nível 1" }}</view>
-              <view style="height: 20rpx"></view>
-              <view style="color: #ffffff">{{
-                serverData2.RechargePlayerSub
-              }}</view>
+              <view class="money">{{ serverData2.RechargePlayerSub }}</view>
             </view>
-            <view
-              style="
-                color: #56a6bd;
-                position: absolute;
-                width: 30%;
-                text-align: center;
-                right: 18%;
-                font-size: 28rpx;
-                top: 46%;
-              "
-            >
+            <view class="renda_item">
               <view>{{ "Nível 2" }}</view>
-              <view style="height: 20rpx"></view>
-              <view style="color: #ffffff">{{
-                serverData2.RechargePlayerSon
-              }}</view>
+              <view class="money">{{ serverData2.RechargePlayerSon }}</view>
             </view>
-            <view class="LvImg"></view>
-            <view style="height: 60rpx"></view>
+            <!-- <view class="LvImg"></view> -->
           </view>
           <view style="height: 20rpx"></view>
         </view>
         <view style="height: 20rpx"></view>
         <view
-          style="
-            border-radius: 12rpx;
-            width: 100%;
-            margin: auto;
-          "
+          style="border-radius: 12rpx; width: 100%; margin: auto"
           class="cardBg card_item"
         >
-          <view style="height: 6rpx"></view>
-          <view class="commonBtnBg2" style="width: 98%; margin: auto">
-            <view
-              style="
-                font-size: 30rpx;
-                text-align: center;
-                line-height: 68rpx;
-              "
-              >{{ $t("KEY_NEW_IDX2_CT") }}</view
-            >
+          <view class="total_line">
+            <view class="commonBtnBg2" >
+              <view
+                style="font-size: 30rpx; text-align: center; line-height: 68rpx"
+                >{{ $t("KEY_NEW_IDX2_CT") }}</view
+              >
+            </view>
+
+            <view class="transNum">
+              <view class="LvImg"></view>
+              <text>
+                {{ "R$ " + gHelper.formatMoney(serverData2.IncomeTeam) }}
+              </text>
+            </view>
           </view>
+
           <view style="height: 10rpx"></view>
-          <view style="text-align: center; font-size: 24rpx; color: #56a6bd">{{
+          <!-- <view style="text-align: center; font-size: 24rpx; color: #56a6bd">{{
             "R$ " + gHelper.formatMoney(serverData2.IncomeTeam)
-          }}</view>
-          <view style="position: relative">
+          }}</view> -->
+          <view style="position: relative" class="renda">
             <view
-              style="
-                color: #56a6bd;
-                position: absolute;
-                width: 30%;
-                text-align: center;
-                left: 18%;
-                font-size: 28rpx;
-                top: 46%;
-              "
+             class="renda_item"
             >
               <view>{{ "Nível 1" }}</view>
-              <view style="height: 20rpx"></view>
-              <view style="color: #ffffff">{{
+              <view class="money">{{
                 "R$ " + gHelper.formatMoney(serverData2.IncomeSub)
               }}</view>
             </view>
             <view
-              style="
-                color: #56a6bd;
-                position: absolute;
-                width: 30%;
-                text-align: center;
-                right: 18%;
-                font-size: 28rpx;
-                top: 46%;
-              "
+             class="renda_item"
             >
               <view>{{ "Nível 2" }}</view>
-              <view style="height: 20rpx"></view>
-              <view style="color: #ffffff">{{
+              <view class="money">{{
                 "R$ " + gHelper.formatMoney(serverData2.IncomeSon)
               }}</view>
             </view>
-            <view class="LvImg"></view>
-            <view style="height: 60rpx"></view>
+           
           </view>
           <view style="height: 20rpx"></view>
         </view>
@@ -506,9 +409,7 @@
                 padding-right: 10rpx;
               "
             >
-              <view style="white-space: pre-wrap; ">{{
-                $t("idx2Tips")
-              }}</view>
+              <view style="white-space: pre-wrap">{{ $t("idx2Tips") }}</view>
             </view>
           </view>
 
@@ -863,7 +764,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 page {
   background: url("@/static/jiefu17/page.png") no-repeat;
   background-size: 100% 100%;
@@ -883,10 +784,8 @@ page {
   border-radius: 360rpx;
 }
 
-
-
 .choseColor {
-  color:#65e8ef;
+  text-shadow: 3rpx 3rpx 30rpx #4cb839;
 }
 
 .NoChoseColor {
@@ -910,7 +809,7 @@ page {
   width: 40%;
   height: 162rpx;
   // margin-left: 10rpx;
- padding: 0 10rpx;
+  padding: 0 10rpx;
 
   .name {
     font-size: 28rpx;
@@ -925,8 +824,8 @@ page {
   background-size: 100% 100%;
 
   margin: auto;
-  width: 54rpx;
-  height: 75rpx;
+  width: 20rpx;
+  height: 27rpx;
 }
 
 .teamBg {
@@ -954,12 +853,14 @@ page {
 .commonBtnBg2 {
   // background: url("@/static/bgblue01aa.png") no-repeat;
   // background-size: 100% 100%;
-  background:#d93195;
-  width: 670rpx;
+  // width: 670rpx;
   height: 68rpx;
   line-height: 68rpx;
   color: #ffffff;
+  display: flex;
+  justify-content: flex-start;
   margin: auto;
+  margin-left: 20rpx;
 }
 .Dados {
   display: flex;
@@ -1143,7 +1044,7 @@ page {
       justify-content: center;
       align-items: center;
       .saqueImg {
-        background: url("@/static/jiefu17/sa_message.png") no-repeat;
+        background: url("@/static/jiefu17/total.png") no-repeat;
         background-size: 100% 100%;
         // margin: auto;
         width: 51rpx;
@@ -1235,15 +1136,57 @@ page {
   font-size: 20rpx;
   padding-top: 15rpx;
 }
-.card_item{
+.card_item {
   padding-top: 20rpx;
-
+  border-radius: 12rpx;
+  width: 100%;
+  margin: auto;
+  background: #dfc329;
 }
 .saqueImg {
-        background: url("@/static/jiefu17/sa_message.png") no-repeat;
-        background-size: 100% 100%;
-        width: 51rpx;
-        height: 33rpx;
-        margin: 18rpx 20rpx;
-      }
+  background: url("@/static/jiefu17/total.png") no-repeat;
+  background-size: 100% 100%;
+  width: 57rpx;
+  height: 61rpx;
+  margin: 0rpx 10rpx;
+}
+.transNum {
+  text-align: center;
+  font-size: 32rpx;
+  color: $dateColor;
+  margin-right: 20rpx;
+  line-height: 64rpx;
+  display: flex;
+}
+
+.total_line {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.renda {
+  display: flex;
+  flex-direction: column;
+  background: #ffe46b;
+  margin: 0 20rpx;
+  border-radius: 15rpx;
+  .renda_item {
+    display: flex;
+    width: calc(98% - 40rpx);
+    justify-content: space-between;
+    margin: auto;
+    padding: 10rpx 20rpx;
+
+    .name {
+      color: #ffffff;
+      font-size: 28rpx;
+      margin-left: 20rpx;
+    }
+    .money {
+      color: $dateColor;
+      font-size: 28rpx;
+      margin-left: 10rpx;
+    }
+  }
+}
 </style>

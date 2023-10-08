@@ -12,7 +12,7 @@
 
 			<view style="font-size: 20rpx; padding-top: 10rpx;">
 				<block v-for="(item, index) in list" v-bind:key="index">
-					<view class="hengzhe" style="margin: auto; margin-top: 10rpx; justify-content:space-around; background: #000000; border-radius: 10rpx; width: 90%; padding-top: 10rpx; padding-bottom: 10rpx;">
+					<view class="hengzhe hengzhe_item">
 						<view style="width: 33%; margin: auto; margin-left: 10rpx;">{{item.Date}}</view>
 						<view style="width: 33%; white-space:normal; text-align: center; text-overflow: ellipsis; margin: auto; color: #F2F65D;">{{gHelper.formatMoney(item.Amount)}}</view>
 						<view style="width: 33%; text-align: center; color: #FFFFFF; display: flex; margin: auto;" v-if="item.Status == 0">
@@ -136,5 +136,14 @@
 		margin-top: 20rpx;
 		border-radius: 10rpx;
 		font-size: 24rpx;
+	}
+	.hengzhe_item{
+		margin: auto; 
+		margin-top: 20rpx; 
+		justify-content:space-around; 
+		background: $lineBg;
+		border-radius: 10rpx;
+		padding-top: 10rpx; 
+		padding-bottom: 10rpx;
 	}
 </style>

@@ -71,174 +71,161 @@
       </view>
       <view style="height: 20rpx"></view>
     </view>
-    <view style="height: 20rpx"></view>
-    <view style="display: flex; width: 90%; margin: auto">
-      <view
-        class="itemBg2"
-        @click="onButtonClick_Menu(10)"
-        style="width: 331rpx; height: 110rpx; display: flex"
-      >
-        <image
-          :src="gAssets.idx5_eu1"
-          mode="widthFix"
-          style="
-            width: 62rpx;
-            margin: auto;
-            margin-left: 20rpx;
-            margin-right: 20rpx;
-          "
-        ></image>
-        <view class="bg2_text">Registos dos fundos</view>
-      </view>
-      <view
-        class="itemBg2"
-        @click="onButtonClick_showIsLogout()"
-        style="width: 331rpx; height: 110rpx; display: flex"
-      >
-        <image
-          :src="gAssets.idx5_eu2"
-          mode="widthFix"
-          style="
-            width: 62rpx;
-            margin: auto;
-            margin-left: 20rpx;
-            margin-right: 20rpx;
-          "
-        ></image>
-        <view class="bg2_text">{{ $t("KEY_INDEX5_LOOUT") }}</view>
-      </view>
+    <view class="itemBg2 itemBg2_add" @click="onButtonClick_Menu(10)">
+      <image
+        :src="gAssets.idx5_eu1"
+        mode="widthFix"
+        style="
+          width: 56rpx;
+          margin: auto;
+          margin-left: 20rpx;
+          margin-right: 20rpx;
+        "
+      ></image>
+      <view class="bg2_text">Registos dos fundos</view>
     </view>
-    <view style="height: 20rpx"></view>
-    <view style="display: flex; width: 90%; margin: auto">
-      <view
-        class="itemBg2"
-        @click="onButtonClick_Menu(0)"
-        style="width: 331rpx; height: 110rpx; display: flex"
-      >
-        <image
-          :src="gAssets.idx5_eu3"
-          mode="widthFix"
-          style="
-            width: 62rpx;
-            margin: auto;
-            margin-left: 20rpx;
-            margin-right: 20rpx;
-          "
-        ></image>
-        <view class="bg2_text">{{ $t("KEY_INDEX5_2") }}</view>
-      </view>
-      <view
-        class="itemBg2"
-        @click="onButtonClick_Menu(1)"
-        style="width: 331rpx; height: 110rpx; display: flex"
-      >
-        <image
-          :src="gAssets.idx5_eu4"
-          mode="widthFix"
-          style="
-            width: 62rpx;
-            margin: auto;
-            margin-left: 20rpx;
-            margin-right: 20rpx;
-          "
-        ></image>
-        <view class="bg2_text">{{ $t("KEY_INDEX5_3") }}</view>
-      </view>
+    <view class="itemBg2 itemBg2_add" @click="onButtonClick_showIsLogout()">
+      <image
+        :src="gAssets.idx5_eu2"
+        mode="widthFix"
+        style="
+          width: 50rpx;
+          margin: auto;
+          margin-left: 20rpx;
+          margin-right: 20rpx;
+        "
+      ></image>
+      <view class="bg2_text">{{ $t("KEY_INDEX5_LOOUT") }}</view>
     </view>
-    <view
-      style="
-        width: 90%;
-        margin: auto;
-        border-radius: 10rpx;
-        margin-top: 20rpx;
-        font-size: 20rpx;
-      "
-      class="cardBg"
-    >
-      <view style="height: 20rpx"></view>
-      <view class="itemBg4" style="display: flex; margin: auto">
-        <view
-          class="itemBg2"
-          style="display: flex; width: 50%; height: 100%; margin-left: 0rpx"
-        >
-          <view class="ic1"></view>
-          <view style="margin: auto; font-size: 20rpx; width: 60%">{{
-            $t("KEY_WIT_LDS")
-          }}</view>
+
+    <view class="itemBg2 itemBg2_add" @click="onButtonClick_Menu(0)">
+      <image
+        :src="gAssets.idx5_eu3"
+        mode="widthFix"
+        style="
+          width: 52rpx;
+          margin: auto;
+          margin-left: 20rpx;
+          margin-right: 20rpx;
+        "
+      ></image>
+      <view class="bg2_text">{{ $t("KEY_INDEX5_2") }}</view>
+    </view>
+    <view class="itemBg2" @click="onButtonClick_Menu(1)">
+      <image
+        :src="gAssets.idx5_eu4"
+        mode="widthFix"
+        style="
+          width: 52rpx;
+          margin: auto;
+          margin-left: 20rpx;
+          margin-right: 20rpx;
+        "
+      ></image>
+      <view class="bg2_text">{{ $t("KEY_INDEX5_3") }}</view>
+    </view>
+
+    <view class="funsDetail">
+      <view class="line">
+        <view class="itemBg4">
+          <view class="icon">
+            <image
+              :src="gAssets.idx5_de1"
+              mode="heightFix"
+              style="height: 52rpx; margin: auto"
+            ></image>
+          </view>
+          <view class="cover"></view>
+          <view class="itemBg4_title">
+            <!-- <view class="ic1"></view> -->
+            <view>{{ $t("KEY_WIT_LDS") }}</view>
+          </view>
+          <view
+            v-if="playerInfo && playerInfo"
+            style="
+              text-align: center;
+              margin: 10rpx auto;
+              font-size: 30rpx;
+              width: 50%;
+            "
+            >{{ gHelper.formatMoney(playerInfo.WithdrawAmount) }}</view
+          >
         </view>
-        <view
-          v-if="playerInfo && playerInfo"
-          style="text-align: center; margin: auto; font-size: 30rpx; width: 50%"
-          >{{ gHelper.formatMoney(playerInfo.WithdrawAmount) }}</view
-        >
-      </view>
-      <view style="height: 20rpx"></view>
-      <view class="itemBg4" style="display: flex; margin: auto">
-        <view
-          class="itemBg2"
-          style="display: flex; width: 50%; height: 100%; margin-left: 0rpx"
-        >
-          <view class="ic2"></view>
-          <view style="margin: auto; font-size: 20rpx; width: 60%">{{
-            $t("KEY_WIT_TIPS2")
-          }}</view>
+        <view class="itemBg4">
+          <view class="icon">
+            <image
+              :src="gAssets.idx5_de2"
+              mode="heightFix"
+              style="height: 52rpx; margin: auto"
+            ></image>
+          </view>
+          <view class="cover"></view>
+          <view class="itemBg4_title">
+            <view>{{ $t("KEY_WIT_TIPS2") }}</view>
+          </view>
+          <view
+            v-if="Number(playerInfo.RequireTurnover) != 0"
+            style="
+              width: 50%;
+              text-align: center;
+              color: #ffffff;
+              font-size: 30rpx;
+              margin: 10rpx auto;
+            "
+            >{{
+              Math.floor(
+                (Number(playerInfo.Turnover) /
+                  Number(playerInfo.RequireTurnover) >
+                1
+                  ? 1
+                  : Number(playerInfo.Turnover) /
+                    Number(playerInfo.RequireTurnover)) * 10000
+              ) /
+                100 +
+              "%"
+            }}</view
+          >
+          <view
+            v-if="Number(playerInfo.RequireTurnover) == 0"
+            style="
+              width: 50%;
+              text-align: center;
+              color: #ffffff;
+              font-size: 30rpx;
+              margin: 10rpx auto;
+            "
+            >{{ "100%" }}</view
+          >
         </view>
-        <view
-          v-if="Number(playerInfo.RequireTurnover) != 0"
-          style="
-            width: 50%;
-            text-align: center;
-            color: #ffffff;
-            font-size: 30rpx;
-            margin: auto;
-          "
-          >{{
-            Math.floor(
-              (Number(playerInfo.Turnover) /
-                Number(playerInfo.RequireTurnover) >
-              1
-                ? 1
-                : Number(playerInfo.Turnover) /
-                  Number(playerInfo.RequireTurnover)) * 10000
-            ) /
-              100 +
-            "%"
-          }}</view
-        >
-        <view
-          v-if="Number(playerInfo.RequireTurnover) == 0"
-          style="
-            width: 50%;
-            text-align: center;
-            color: #ffffff;
-            font-size: 30rpx;
-            margin: auto;
-          "
-          >{{ "100%" }}</view
-        >
-      </view>
-      <view style="height: 20rpx"></view>
-      <view class="itemBg4" style="display: flex; margin: auto">
-        <view
-          class="itemBg2"
-          style="display: flex; width: 50%; height: 100%; margin-left: 0rpx"
-        >
-          <view class="ic3"></view>
-          <view style="margin: auto; font-size: 20rpx; width: 60%">{{
-            $t("KEY_WIT_ATIVOS")
-          }}</view>
+        <view class="itemBg4">
+          <view class="icon">
+            <image
+              :src="gAssets.idx5_de3"
+              mode="heightFix"
+              style="height: 52rpx; margin: auto"
+            ></image>
+          </view>
+          <view class="cover"></view>
+          <view class="itemBg4_title">
+            <!-- <view class="ic3"></view> -->
+            <view>{{ $t("KEY_WIT_ATIVOS") }}</view>
+          </view>
+          <view
+            v-if="playerInfo && playerInfo"
+            style="
+              text-align: center;
+              margin: 10rpx auto;
+              font-size: 30rpx;
+              width: 50%;
+            "
+            >{{ gHelper.formatMoney(playerInfo.LimitAmount) }}</view
+          >
         </view>
-        <view
-          v-if="playerInfo && playerInfo"
-          style="text-align: center; margin: auto; font-size: 30rpx; width: 50%"
-          >{{ gHelper.formatMoney(playerInfo.LimitAmount) }}</view
-        >
       </view>
 
-      <view style="height: 10rpx"></view>
       <view
         v-if="!playerInfo.Loading"
-        style="font-size: 22rpx; color: #ffffff; text-align: center"
+        class="tips_text"
         >{{ $t("KEY_WIT_TIPS1") }}</view
       >
       <view v-if="playerInfo.Loading" style="color: #55ec3d">
@@ -617,8 +604,8 @@
 </template>
 
 <script>
-import uniplayertitle from '@/components/game/uni-playertitle.vue'
-import mdfName from '@/components/game/uni-mdfName.vue'
+import uniplayertitle from "@/components/game/uni-playertitle.vue";
+import mdfName from "@/components/game/uni-mdfName.vue";
 
 export default {
   components: {
@@ -626,7 +613,7 @@ export default {
     mdfName,
   },
 
-  data () {
+  data() {
     return {
       list: [
         {
@@ -676,171 +663,177 @@ export default {
       },
 
       editMode: 0, // 0= 正常 1=充值信息 2=提现信息 3=切换语言
-    }
+    };
   },
 
-  onLoad (option) {
-    uni.hideTabBar()
+  onLoad(option) {
+    uni.hideTabBar();
   },
 
   // 第一次执行onShow时 组件还没加载完成, 这是否就只能放在onReady刷新
-  onShow () {
+  onShow() {
     if (this.$refs && this.$refs.myTabbar) {
-      this.$refs.myTabbar.flushTabarText()
+      this.$refs.myTabbar.flushTabarText();
     }
-    this.flush()
-    this.$store.commit('changeTabBar', {
-      index: 2
-    })
+    this.flush();
+    this.$store.commit("changeTabBar", {
+      index: 2,
+    });
   },
 
-  onReady () {
+  onReady() {
     // this.flush();
     if (this.$refs && this.$refs.myTabbar) {
-      this.$refs.myTabbar.flushTabarText()
+      this.$refs.myTabbar.flushTabarText();
     }
   },
 
   //监听下拉刷新
-  onPullDownRefresh () {
-    this.flush()
+  onPullDownRefresh() {
+    this.flush();
   },
 
-  onHide () { },
+  onHide() {},
 
-  onUnload () {
-    uni.stopPullDownRefresh()
+  onUnload() {
+    uni.stopPullDownRefresh();
   },
 
   methods: {
-    flush () {
-      uni.stopPullDownRefresh()
+    flush() {
+      uni.stopPullDownRefresh();
       if (this.$refs && this.$refs.uniplayertitle) {
-        this.$refs.uniplayertitle.flush()
+        this.$refs.uniplayertitle.flush();
       }
-      this.gRequest.infomationManager.informationInfo(this.onEventCallback_informationInfo.bind(this))
+      this.gRequest.infomationManager.informationInfo(
+        this.onEventCallback_informationInfo.bind(this)
+      );
     },
 
-    flushTarbar () {
+    flushTarbar() {
       if (this.$refs && this.$refs.myTabbar) {
-        this.$refs.myTabbar.flushTabarText()
+        this.$refs.myTabbar.flushTabarText();
       }
     },
 
-    onEventCallback_informationInfo (data) {
-      this.playerInfo = data
+    onEventCallback_informationInfo(data) {
+      this.playerInfo = data;
     },
 
     // 关闭
-    onButtonClick_ClosePopWindow () {
-      this.editMode = 0
+    onButtonClick_ClosePopWindow() {
+      this.editMode = 0;
     },
 
     // 编辑菜单下的OK按钮
-    onButtonClick_OK (index) {
-      this.editMode = 0
+    onButtonClick_OK(index) {
+      this.editMode = 0;
     },
 
     // 语言选择
-    onButtonClick_SelectLanguth (index) {
-      this.selectLanguage = index
+    onButtonClick_SelectLanguth(index) {
+      this.selectLanguage = index;
     },
 
     // 点击菜单
-    onButtonClick_Menu (index) {
+    onButtonClick_Menu(index) {
       switch (index) {
         case 4:
           // realimentacao 客服
           if (this.$refs && this.$refs.kefuPop) {
-            this.$refs.kefuPop.ShowPopWindow()
+            this.$refs.kefuPop.ShowPopWindow();
           }
-          break
+          break;
 
         case 0:
           // info recharge 提现信息
-          if (this.playerInfo.RechargeAccount == null || this.playerInfo.RechargeAccount.Id == 0) {
+          if (
+            this.playerInfo.RechargeAccount == null ||
+            this.playerInfo.RechargeAccount.Id == 0
+          ) {
             uni.navigateTo({
-              url: 'bindrecharge',
-            })
+              url: "bindrecharge",
+            });
           } else {
-            this.editMode = 2
+            this.editMode = 2;
           }
 
-          break
+          break;
 
         case 1:
           // info withdraw 充值信息
-          if (this.playerInfo.WithdrawAccount == null || this.playerInfo.WithdrawAccount.Id == 0) {
+          if (
+            this.playerInfo.WithdrawAccount == null ||
+            this.playerInfo.WithdrawAccount.Id == 0
+          ) {
             uni.navigateTo({
-              url: 'mudarbanco',
-            })
+              url: "mudarbanco",
+            });
           } else {
-            this.editMode = 1
+            this.editMode = 1;
           }
-          break
+          break;
 
         case 2:
           // recharge
           uni.navigateTo({
-            url: 'reRecord',
-          })
-          break
+            url: "reRecord",
+          });
+          break;
 
         case 3:
           // withdrawals
           uni.navigateTo({
-            url: 'wiRecord',
-          })
-          break
+            url: "wiRecord",
+          });
+          break;
 
         case 5:
           // 语言
-          this.editMode = 3
-          break
+          this.editMode = 3;
+          break;
         case 7:
-          this.editMode = 7
-          break
+          this.editMode = 7;
+          break;
         case 10:
           uni.navigateTo({
-            url: "Registos"
-          })
-          break
+            url: "Registos",
+          });
+          break;
       }
     },
 
     // 编辑按钮
-    onButtonClick_Edit (index) {
+    onButtonClick_Edit(index) {
       if (1 == index) {
         // 提现绑定
         uni.navigateTo({
-          url: 'mudarbanco?type=2',
-        })
+          url: "mudarbanco?type=2",
+        });
       } else if (2 == index) {
         // 充值绑定
         uni.navigateTo({
-          url: 'bindrecharge?type=2',
-        })
+          url: "bindrecharge?type=2",
+        });
       }
     },
 
-    onButtonClick_showIsLogout () {
-      this.editMode = 4
+    onButtonClick_showIsLogout() {
+      this.editMode = 4;
     },
 
-    onButtonClick_loginOut () {
-      this.editMode = 0
-      this.gRequest.userManager.logout()
+    onButtonClick_loginOut() {
+      this.editMode = 0;
+      this.gRequest.userManager.logout();
     },
 
-
-    onButtonClick_ShowMdfName () {
+    onButtonClick_ShowMdfName() {
       if (this.$refs && this.$refs.mdfName) {
-        this.$refs.mdfName.showPop()
+        this.$refs.mdfName.showPop();
       }
     },
-
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -918,23 +911,24 @@ page {
 }
 
 .itemBg1 {
-  background: rgba(98, 32, 157, 0.6);
+  background: rgba(255, 255, 255, 0.2);
   width: 274rpx;
   height: 68rpx;
   border-radius: 10rpx;
-  border: 2rpx solid #ffb000;
+  border: 2rpx solid #ffd82b;
   color: #ffffff;
 }
 
 .itemBg2 {
   // background: url('@/static/new/btnred01.png') no-repeat;
   // background-size: 100% 100%;
-  background: #d93195;
+  background: #ffd82b;
   border-radius: 10rpx;
-  width: 670rpx;
-  height: 110rpx;
+  width: 90%;
+  height: 90rpx;
   display: flex;
-  margin: auto;
+  justify-content: space-between;
+  margin: 20rpx auto;
 
   .bg2_text {
     margin: auto;
@@ -946,7 +940,7 @@ page {
 }
 
 .itemBg3 {
-  background: #d93195;
+  background:$barColor ;
   width: 670rpx;
   height: 68rpx;
   color: #7a4117;
@@ -958,13 +952,71 @@ page {
 .itemBg4 {
   // background: url('@/static/new/enter-3.png') no-repeat;
   // background-size: 100% 100%;
-  background: #62209d;
-  width: 653rpx;
-  height: 71rpx;
-  color: #ffffff;
-  border-radius: 10rpx;
-  border: 2rpx solid #ffb000;
-  display: flex;
+  background: #002377;
+}
+
+.funsDetail {
+  width: 90%;
   margin: auto;
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+  font-size: 20rpx;
+
+  .line {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 140rpx;
+
+    .itemBg4 {
+      width: 30%;
+      height: 160rpx;
+      border-radius: 10rpx;
+      position: relative;
+
+      .itemBg4_title {
+        width: 100%;
+        background: #ffd82b;
+        height: 90rpx;
+        border-radius: 10rpx;
+        font-size: 30rpx;
+        text-align: center;
+        line-height: 30rpx;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 3;
+      }
+
+      .icon {
+        width: 104rpx;
+        height: 104rpx;
+        border-radius: 50%;
+        background: rgba(24, 105, 43, 0.5);
+        position: absolute;
+        top: -90rpx;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .cover {
+        width: 100%;
+        height: 90rpx;
+      }
+    }
+  }
+}
+
+.tips_text{
+  margin-top: 30rpx;
+  font-size: 22rpx; 
+  color: #ffffff; 
+  text-align: center
 }
 </style>

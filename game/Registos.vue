@@ -26,19 +26,9 @@
       <view style="font-size: 20rpx; padding-top: 10rpx">
         <block v-for="(item, index) in list" v-bind:key="index">
           <view
-            class="hengzhe"
-            style="
-              margin: auto;
-              margin-top: 10rpx;
-              justify-content: space-around;
-              background: #000000;
-              border-radius: 10rpx;
-              width: 95%;
-              padding-top: 10rpx;
-              padding-bottom: 10rpx;
-            "
+            class="hengzhe hengzhe_item"
           >
-            <view style="width: 30%; margin: auto; margin-left: 10rpx">{{
+            <view  class="date">{{
               item.ChangeTime
             }}</view>
             <view
@@ -119,69 +109,66 @@
 </template>
 
 <script>
-import unititle from '@/components/common/uni-title.vue'
+import unititle from "@/components/common/uni-title.vue";
 export default {
   components: {
-    unititle
+    unititle,
   },
 
-  data () {
+  data() {
     return {
-      title: this.$t('KEY_NEW_RDF'),
+      title: this.$t("KEY_NEW_RDF"),
 
       page: 1,
 
       list: [],
-
-
-    }
+    };
   },
 
-  onLoad (option) {
-
-  },
+  onLoad(option) {},
 
   // 第一次执行onShow时 组件还没加载完成, 这是否就只能放在onReady刷新
-  onShow () {
+  onShow() {},
 
-  },
-
-  onReady () {
-    this.flush()
+  onReady() {
+    this.flush();
   },
 
   //监听下拉刷新
-  onPullDownRefresh () {
-    this.flush()
+  onPullDownRefresh() {
+    this.flush();
   },
 
-  onHide () { },
+  onHide() {},
 
-  onUnload () {
-    uni.stopPullDownRefresh()
+  onUnload() {
+    uni.stopPullDownRefresh();
   },
 
   methods: {
-    flush () {
-      uni.stopPullDownRefresh()
-      this.gRequest.infomationManager.getFundDetail(this.onEventCallback_getFundDetail.bind(this), this.page)
+    flush() {
+      uni.stopPullDownRefresh();
+      this.gRequest.infomationManager.getFundDetail(
+        this.onEventCallback_getFundDetail.bind(this),
+        this.page
+      );
     },
 
-    onClickButton_Back () {
-      this.gHelper.back(this)
+    onClickButton_Back() {
+      this.gHelper.back(this);
     },
 
-    onEventCallback_getFundDetail (data) {
+    onEventCallback_getFundDetail(data) {
       if (data && data.length > 0) {
         for (let i = 0; i < data.length; i++) {
-          data[i].ChangeTime = this.gHelper.getTime(data[i].ChangeTime)
-          this.list.push(data[i])
+          data[i].ChangeTime = this.gHelper.getTime(data[i].ChangeTime);
+          this.list.push(data[i]);
         }
-        this.page = this.page + 1
+        this.page = this.page + 1;
       }
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -198,5 +185,22 @@ page {
   margin-top: 20rpx;
   border-radius: 10rpx;
   font-size: 24rpx;
+}
+.hengzhe_item {
+  margin: auto;
+  margin-top: 20rpx;
+  justify-content: space-around;
+  background: #fcd62b;
+  border-radius: 10rpx;
+  width: 95%;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+
+  .date{
+    color: #3cbc73;
+    width: 30%; 
+    margin: auto; 
+    margin-left: 10rpx;
+  }
 }
 </style>

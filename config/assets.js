@@ -136,7 +136,7 @@ export default {
 		PATH + "new/btn004 k.png",
 	],
 	mogamePic: PATH + 'new/more2.png',
-	common_flush: PATH + 'jiefu16/loop.png',
+	common_flush: PATH + 'jiefu17/flush.png',
 	rankImg: [
 		PATH + "new/icon0021.png",
 		PATH + "new/icon0022.png",
@@ -245,11 +245,15 @@ export default {
 	noticeTop: PATH + "bg02cvb.png",
 	noticeTop2: PATH + "bg03b.png",
 
-	idx5_icon1: PATH + "jiefu16/phone.png",
-	idx5_icon2: PATH + "jiefu16/person.png",
-	idx5_eu1: PATH + "jiefu16/eu1.png",
-	idx5_eu2: PATH + "jiefu16/eu2.png",
-	idx5_eu3: PATH + "jiefu16/eu3.png",
-	idx5_eu4: PATH + "jiefu16/eu4.png",
-	idx5_trends: PATH + "jiefu16/trends.png"
+	idx5_icon1: PATH + "jiefu17/phone.png",
+	idx5_icon2: PATH + "jiefu17/group.png",
+	idx5_eu1: PATH + "jiefu17/fundo.png",
+	idx5_eu2: PATH + "jiefu17/logout.png",
+	idx5_eu3: PATH + "jiefu17/recarga.png",
+	idx5_eu4: PATH + "jiefu17/rada.png",
+	idx5_trends: PATH + "jiefu17/trend.png",
+	idx5_de1:PATH + "jiefu17/de1.png",
+	idx5_de2:PATH + "jiefu17/de2.png",
+	idx5_de3:PATH + "jiefu17/de3.png",
+
 }

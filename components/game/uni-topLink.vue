@@ -97,7 +97,7 @@ export default {
         Id: null,
         NickName: "",
       },
-      isLogin: false ,
+      isLogin: false  ,
       test: "",
       giftPop: "",
       link1: "",

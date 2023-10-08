@@ -29,8 +29,7 @@ const CONFIG = {
 
 		// 正式版服务器地址
 		// baseUrl = 'https://www.ola-win.com';
-		baseUrl = 'https://www.brrealbet777.com'
-		// baseUrl = 'http://192.168.1.4:8001'
+		// baseUrl = 'http://192.168.31.169:8001'
 		// baseUrl = 'https://www.eitabet.com';
 		// baseUrl = 'https://www.slotdasortebet.com';
 		// baseUrl = 'http://192.168.1.197:8888';
@@ -39,6 +38,11 @@ const CONFIG = {
 		// #endif
 
 		// utils.logOuti('server ip:' + baseUrl);
+		// baseUrl = 'https://www.brrealbet777.com'
+		baseUrl = 'https://www.royale777slots.com'
+		
+		
+		
 		return baseUrl
 	},
 
