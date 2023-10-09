@@ -23,9 +23,9 @@
 			
 			<view style="width: 96%; margin: auto;">
 				
-				<view class="hengzhe" style="">
+				<view class="hengzhe">
 					<!-- <image :src="gAssets.idx1kefu" mode="widthFix" style="width: 73rpx; margin: auto; margin-left: 20rpx;" @click="onButtonClick_kf()"></image> -->
-					<view style="width: 96%; margin: auto; font-size: 20rpx; color: #FFFFFF; margin-left: 10rpx;">{{tips1}}</view>
+					<view style="width: 96%; margin: auto; font-size: 26rpx; color: #FFFFFF; margin-left: 10rpx;">{{tips1}}</view>
 				</view>
 				
 				
@@ -33,20 +33,20 @@
 			
 			<view style="height: 20rpx;"></view>
 			
-			<view style="display: flex;">
-				<view style="width: 46%; margin: auto; font-size: 26rpx;">
+			<view  class="totalCount">
+				<view style="width: 46%;  font-size: 26rpx;">
 					<view style="color: #FCEDD4;">{{$t('KEY_NEW_DL_VDAES')}}</view>
 					<view style="height: 10rpx;"></view>
-					<view class="btnLvSe" style="width: 100%; border-radius: 12rpx; margin: auto; text-align: center; font-size: 26rpx;">
+					<view class="btnLvSe btnLvSe_left" style="width: 100%; border-radius: 12rpx; margin: auto; text-align: center; font-size: 26rpx;">
 						<!-- <view style="height: 20rpx;"></view> -->
 						<view >{{gHelper.formatMoney(serverData.ThisWeekTurnover) + 'R$'}}</view>
 						<!-- <view style="height: 20rpx;"></view> -->
 					</view>
 				</view>
-				<view style="width: 46%; margin: auto; font-size: 26rpx;">
+				<view style="width: 46%;  font-size: 26rpx;">
 					<view style="color: #FCEDD4;">{{$t('KEY_NEW_DL_VDADSP')}}</view>
 					<view style="height: 10rpx;"></view>
-					<view class="btnLvSe" style="width: 100%; border-radius: 12rpx; margin: auto; text-align: center; font-size: 26rpx;">
+					<view class="btnLvSe btnLvSe_right" style="width: 100%; border-radius: 12rpx; margin: auto; text-align: center; font-size: 26rpx;">
 						<!-- <view style="height: 20rpx;"></view> -->
 						<view >{{gHelper.formatMoney(serverData.LastWeekTurnover) + 'R$'}}</view>
 						<!-- <view style="height: 20rpx;"></view> -->
@@ -55,20 +55,20 @@
 			</view>
 			<view style="height: 20rpx;"></view>
 			
-			<view style="display: flex;">
-				<view style="width: 46%; margin: auto; font-size: 26rpx;">
+			<view class="totalCount">
+				<view style="width: 46%;  font-size: 26rpx;">
 					<view style="color: #FCEDD4;">{{$t('KEY_NEW_DL_SE')}}</view>
 					<view style="height: 10rpx;"></view>
-					<view class="btnLvSe" style="width: 100%; border-radius: 12rpx; margin: auto; text-align: center; font-size: 26rpx;">
+					<view class="btnLvSe btnLvSe_left" style="width: 100%; border-radius: 12rpx; margin: auto; text-align: center; font-size: 26rpx;">
 						<!-- <view style="height: 20rpx;"></view> -->
 						<view >{{gHelper.formatMoney(serverData.ThisWeekSalary) + 'R$'}}</view>
 						<!-- <view style="height: 20rpx;"></view> -->
 					</view>
 				</view>
-				<view style="width: 46%; margin: auto; font-size: 26rpx;">
+				<view style="width: 46%;  font-size: 26rpx;">
 					<view style="color: #FCEDD4;">{{$t('KEY_NEW_DL_SC')}}</view>
 					<view style="height: 10rpx;"></view>
-					<view class="btnLvSe" style="width: 100%; border-radius: 12rpx; margin: auto; text-align: center; font-size: 26rpx;">
+					<view class="btnLvSe btnLvSe_right" style="width: 100%; border-radius: 12rpx; margin: auto; text-align: center; font-size: 26rpx;">
 						<!-- <view style="height: 20rpx;"></view> -->
 						<view >{{gHelper.formatMoney(serverData.LastWeekSalary) + 'R$'}}</view>
 						<!-- <view style="height: 20rpx;"></view> -->
@@ -79,7 +79,7 @@
 			<view style="height: 40rpx;"></view>
 			<view @click="onButtonClick_Receber" class="receberBtnBg" style="display: flex;">
 				<view class="saqueImg"></view>
-				<view style=" margin-right: 40rpx;margin-left:10rpx; width: 70%;">{{$t('KEY_INDEX2_RE')}}</view>
+				<view style=" margin-right: 40rpx;margin-left:10rpx;">{{$t('KEY_INDEX2_RE')}}</view>
 			</view>
 			<view style="height: 20rpx;"></view>
 			<!-- <view style="width: 96%; margin: auto; height: 2rpx; background-color: #ffffff;"></view> -->
@@ -313,11 +313,11 @@
 	}
 	
 	.saqueImg {
-		background: url("@/static/jiefu17/sa_message.png") no-repeat;
+		background: url("@/static/jiefu17/btn3_icon.png") no-repeat;
 		background-size: 100% 100%;
-		width: 34rpx;
-		height: 22rpx;
-		margin-left: 40rpx;
+		width: 45rpx;
+		height: 48rpx;
+		// margin-left: 40rpx;
 	}
 	.ban{
 		width: 537rpx; 
@@ -332,13 +332,27 @@
       width: 613rpx;
 	}
 	.receberBtnBg{
-		background:  url('@/static/jiefu17/sa_btn.png') no-repeat;
+		background:  url('@/static/jiefu17/btn3.png') no-repeat;
 		background-size: 100% 100%;
-		width: 260rpx;
-		height: 80rpx;
+		width: 266rpx;
+		height: 96rpx;
 		margin: 0 auto;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 	}
+
+	.totalCount{
+		display: flex;
+		justify-content: center;
+	}
+.btnLvSe_left{
+  background: url("@/static/jiefu17/btn_left.png") no-repeat;
+  background-size: 100% 100%;
+}
+.btnLvSe_right{
+	background: url("@/static/jiefu17/btn_right.png") no-repeat;
+  background-size: 100% 100%;
+}
+
 </style>

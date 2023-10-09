@@ -39,7 +39,14 @@ const CONFIG = {
 
 		// utils.logOuti('server ip:' + baseUrl);
 		// baseUrl = 'https://www.brrealbet777.com'
-		baseUrl = 'https://www.royale777slots.com'
+		console.log('env',process.env.NODE_ENV)
+		if(process.env.NODE_ENV ==="development"){
+			baseUrl = 'https://www.royale777slots.com'
+		}
+		else{
+			baseUrl = 'https://www.royale777slots.com'
+		}
+		
 		
 		
 		

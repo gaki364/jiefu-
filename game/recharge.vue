@@ -48,7 +48,7 @@
 
 				<view style="width: 100%; margin: auto; margin-top: 20rpx; border-radius: 12rpx; padding-top: 10rpx; padding-bottom: 10rpx;">
 					<!-- <view style="margin-left: 20rpx; color: #C9C8C8;">{{$t("KEY_RECH_FIODR")}}</view> -->
-					<input class="loginInput" style="width: 100%; text-indent: 50rpx; margin: auto; font-size: 26rpx;" @input="getDesconto()" :placeholder="$t('bind.test8')" type="number" v-model="inputAmount"></input>
+					<input class="loginInput" style="width: 100%; text-indent: 50rpx; margin: auto; font-size: 26rpx;" @input="getDesconto()" :placeholder="$t('bind.test8')" type="number" v-model="inputAmount" disabled></input>
 				</view>
 				<view style="height: 30rpx;"></view>
 			</view>
@@ -263,6 +263,9 @@
 			// 点击充值金额
 			onButtonClick_SelectRecharge(index) {
 				this.selectRecharge = index;
+				let amount = this.itemList[this.selectRecharge].Amount;
+				this.inputAmount = amount;
+				this.getDesconto();
 			},
 
 			// Type 点击

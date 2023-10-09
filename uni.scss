@@ -129,7 +129,7 @@ $topBg:url("@/static/jiefu17/topBg.png") no-repeat;
 
 		.window {
 			// background: linear-gradient(#1D214F, #1D214F);
-			background:#d93195 ;
+			background:#ffd82b ;
 			background-size: 100% 100%;
 			// border: 2rpx solid #1D5467;
 			// border-radius: 18rpx;
@@ -150,7 +150,7 @@ $topBg:url("@/static/jiefu17/topBg.png") no-repeat;
 			
 			.centerBg {
 				width: 92%;
-				background: rgba($color: #7C0A1D, $alpha: 1);
+				background: rgba($color: #ffffff, $alpha: 0.5);
 				margin: auto;
 				border-radius: 12rpx;
 			}
@@ -176,7 +176,6 @@ $topBg:url("@/static/jiefu17/topBg.png") no-repeat;
 .btnLvSe {
 	width: 40%;
 	height: 68rpx;
-	
 	font-size: 30rpx;
 	text-align: center;
 	background-size: 100% 100%;
@@ -187,7 +186,7 @@ $topBg:url("@/static/jiefu17/topBg.png") no-repeat;
 	
 	color: #FFFFFF;
 	// border: 4rpx solid #D11411;
-	background: url('@/static/new/enter-2.png') no-repeat;
+	// background: url('@/static/jiefu17/btn1.png') no-repeat;
 	background-size: 100% 100%;
 	
 }
@@ -196,17 +195,15 @@ $topBg:url("@/static/jiefu17/topBg.png") no-repeat;
 .btnHuangSe {
 	width: 40%;
 	height: 68rpx;
-
 	font-size: 30rpx;
 	background-size: 100% 100%;
 	border-radius: 18rpx;
 	line-height: 68rpx;
 	text-align: center;
 	margin: auto;
-	
 	color: #FFFFFF;
 	// border: 4rpx solid #D11411;
-	background: url('@/static/new/enter-2.png') no-repeat;
+	background: url('@/static/jiefu17/btn2.png') no-repeat;
 	background-size: 100% 100%;
 }
 
@@ -323,7 +320,7 @@ $topBg:url("@/static/jiefu17/topBg.png") no-repeat;
 }
 
 .dlBg {
-	background: url('@/static/jiefu16/agentBg.png') no-repeat;
+	background: url('@/static/jiefu17/cards.png') no-repeat;
 	background-size: 100% 100%;
 	width: 697rpx;
 	height: 292rpx;
@@ -351,11 +348,11 @@ $topBg:url("@/static/jiefu17/topBg.png") no-repeat;
 .inputType {
 	// background: url('@/static/enter07.png') no-repeat;
 	// background-size: 100% 100%;
-	background: #5c356a;
+	background: #01913a;
 	margin: auto;
 	height: 64rpx;
 	font-size: 20rpx;
-	border:2rpx solid #69f4f6;
+	border:2rpx solid #055924;
 	
 }
 .loginInput{
@@ -372,7 +369,7 @@ $topBg:url("@/static/jiefu17/topBg.png") no-repeat;
       text-wrap: nowrap;
 }
 .cardBg{
-	// background: rgba(217, 49, 149, 0.2);
+	background: rgba(#15702e,0.6);
 }
 .drawBg{
 	background-color: #d93195 !important;

@@ -185,7 +185,8 @@
 		position: relative;
 		-webkit-overflow-scroll: touch;
 		// background: linear-gradient(#181E5C, #181E5C);
-		background: #62209d;
+		background:url("@/static/jiefu17/footer_bg.png") no-repeat;
+		background-size: 100% 100%;
 		border-top: 2rpx solid #69f4f9;
 	}
 

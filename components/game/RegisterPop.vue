@@ -18,7 +18,7 @@
 					<view class="loginInput" style="width: 96%; margin: auto; display: flex;">
 						<view style="width: 41rpx;"></view>
 						<input class="login-type-input" style="margin: auto; margin-left: 10rpx;" :placeholder="'Insira o Nome de usuário'" type="text"
-						v-model="registerParams.username" maxlength="99">
+						v-model="registerParams.username" maxlength="50">
 					</view>
 					
 					<view style="height: 40rpx;"></view>

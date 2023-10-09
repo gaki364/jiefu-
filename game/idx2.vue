@@ -323,7 +323,7 @@
 						</view> -->
           <view class="BoxBgImg">
             <!-- 昨天的数字 -->
-            <view class="name overLine">Número de hoje</view>
+            <view class="name ">Número de hoje</view>
             <view
               style="font-size: 28rpx; text-align: center; line-height: 90rpx"
               >{{ serverData.TodayPromoteNum }}</view
@@ -331,7 +331,7 @@
           </view>
           <view class="BoxBgImg" style="margin-right: 0rpx">
             <!-- 今天的数字 -->
-            <view class="name overLine">Número de ontem</view>
+            <view class="name ">Número de ontem</view>
             <view
               style="font-size: 28rpx; text-align: center; line-height: 90rpx"
               >{{ serverData.YesterdayPromoteReward }}</view
@@ -391,7 +391,7 @@
         <view style="height: 20rpx"></view>
         <view class="teamPic"></view>
         <!-- 第三行 -->
-        <view class="Ervie cardBg">
+        <view class="Ervie ">
           <view style="height: 10rpx"></view>
           <view
             style="
@@ -793,29 +793,29 @@ page {
 }
 
 .teamPic {
-  background: url("@/static/jiefu16/teampic.png") no-repeat;
+  background: url("@/static/jiefu17/members.png") no-repeat;
   background-size: 100% 100%;
-
   margin: auto;
-  width: 366rpx;
-  height: 324rpx;
+  width: 659rpx;
+  height: 325rpx;
 }
 
 .BoxBgImg {
-  background: url("@/static/jiefu17/xBtnbg.png") no-repeat;
+  background: url("@/static/jiefu17/moduleBg.png") no-repeat;
   background-size: 100% 100%;
 
   margin: auto;
   width: 40%;
-  height: 162rpx;
+  height: 192rpx;
   // margin-left: 10rpx;
   padding: 0 10rpx;
 
   .name {
     font-size: 28rpx;
     text-align: center;
-    line-height: 82rpx;
+    // line-height: 82rpx;
     color: #fff;
+    padding: 10rpx 15rpx 0rpx 15rpx;
   }
 }
 
@@ -915,18 +915,18 @@ page {
     }
 
     .page3Img {
-      background: url("@/static/jiefu17/222.png") no-repeat;
+      background: url("@/static/jiefu17/agent.png") no-repeat;
       background-size: 100% 100%;
-      width: 60rpx;
-      height: 60rpx;
+      width: 57rpx;
+      height: 47rpx;
       position: relative;
       margin: auto;
     }
     .page3Img2 {
-      background: url("@/static/jiefu17/222.png") no-repeat;
+      background: url("@/static/jiefu17/agent.png") no-repeat;
       background-size: 100% 100%;
-      width: 60rpx;
-      height: 60rpx;
+      width: 57rpx;
+      height: 47rpx;
       position: relative;
       margin: auto;
     }
@@ -948,7 +948,7 @@ page {
     .label {
       font-size: 24rpx;
       color: #ffffff;
-      width: 280rpx;
+      width: 240rpx;
       text-align: left;
     }
     .input {
@@ -959,7 +959,7 @@ page {
 
       .input_box {
         display: flex;
-        border-radius: 12rpx;
+        border-radius: 6rpx;
         // width: 96%;
         position: relative;
         display: flex;
@@ -978,8 +978,8 @@ page {
         }
       }
       .input_img {
-        width: 38rpx;
-        height: 42rpx;
+        width: 40rpx;
+        height: 46rpx;
         margin: auto 10rpx auto auto;
       }
     }
@@ -1009,21 +1009,22 @@ page {
     .item1 {
       .item1_top {
         text-align: left;
-        color: #69f4f9;
+        color: #ffd82b;
       }
       .item1_bot {
         text-align: left;
+        font-size: 36rpx;
         color: #ffffff;
       }
     }
     .item2 {
-      color: #ffffff;
+      color: #ffd82b;
       text {
         text-decoration: underline;
       }
     }
     .item3 {
-      color: #ffffff;
+      color: #ffd82b;
       text {
         text-decoration: underline;
       }
@@ -1034,21 +1035,21 @@ page {
     margin: auto;
 
     .commonBtnBg {
-      background: url("@/static/jiefu17/sa_btn.png") no-repeat;
+      background: url("@/static/jiefu17/btn3.png") no-repeat;
       background-size: 100% 100%;
-      width: 257rpx;
-      height: 79rpx;
+      width: 266rpx;
+      height: 96rpx;
       color: #ffffff;
       margin: auto;
       display: flex;
       justify-content: center;
       align-items: center;
       .saqueImg {
-        background: url("@/static/jiefu17/total.png") no-repeat;
+        background: url("@/static/jiefu17/btn3_icon.png") no-repeat;
         background-size: 100% 100%;
         // margin: auto;
-        width: 51rpx;
-        height: 33rpx;
+        width: 45rpx;
+        height: 48rpx;
         margin: 0 20rpx;
       }
 
@@ -1060,11 +1061,11 @@ page {
       }
 
       .TransferirImg {
-        background: url("@/static/jiefu16/xz.png") no-repeat;
+        background: url("@/static/jiefu17/btn4_icon.png") no-repeat;
         background-size: 100% 100%;
         margin: auto;
-        width: 44rpx;
-        height: 46rpx;
+        width: 52rpx;
+        height: 49rpx;
         margin-left: 40rpx;
       }
     }
@@ -1076,7 +1077,6 @@ page {
     width: 96%;
     .tips {
       font-size: 24rpx;
-      color: #e5ca8b;
       margin: auto;
     }
     .tips2 {
@@ -1116,7 +1116,7 @@ page {
   padding: 20rpx;
 
   .detal_btn {
-    background: #d93195;
+    background: #ffd82b;
     border-radius: 10rpx;
     width: 100%;
     height: 79rpx;
